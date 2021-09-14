@@ -1,0 +1,20 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?"/>
+
+<p>Number is: @_number</p>
+<button @onclick="()=>Increase(5)"> click to add 1 </button>
+
+@code
+{
+    int _number = 0;
+
+    private void Increase(int increaseAmount)
+    {
+        _number += increaseAmount;
+    }
+}
