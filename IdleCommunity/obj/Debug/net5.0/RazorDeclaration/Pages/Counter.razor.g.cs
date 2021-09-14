@@ -89,6 +89,13 @@ using MudBlazor;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "/mnt/LinuxSpace/Work/Projects/IdleCommunity/IdleCommunity/_Imports.razor"
+using Services;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -106,7 +113,7 @@ using MudBlazor;
     {
         currentCount++;
     }
-
+    
 
 #line default
 #line hidden

@@ -89,6 +89,13 @@ using MudBlazor;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "/mnt/LinuxSpace/Work/Projects/IdleCommunity/IdleCommunity/_Imports.razor"
+using Services;
+
+#line default
+#line hidden
+#nullable disable
     public partial class MainLayout : LayoutComponentBase
     {
         #pragma warning disable 1998
@@ -97,8 +104,9 @@ using MudBlazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 24 "/mnt/LinuxSpace/Work/Projects/IdleCommunity/IdleCommunity/Shared/MainLayout.razor"
+#line 27 "/mnt/LinuxSpace/Work/Projects/IdleCommunity/IdleCommunity/Shared/MainLayout.razor"
        
+    
     bool _drawerOpen = true;
 
     void DrawerToggle()
@@ -106,10 +114,25 @@ using MudBlazor;
         _drawerOpen = !_drawerOpen;
     }
 
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 36 "/mnt/LinuxSpace/Work/Projects/IdleCommunity/IdleCommunity/Shared/MainLayout.razor"
+       
+    Color appMenuBarColor;
+    protected override Task OnInitializedAsync()
+    {
+        appMenuBarColor = _colorSchemeService.ColorScheme[_navManager.Uri.Replace(_navManager.BaseUri, "/")];
+        return base.OnInitializedAsync();
+    }
+
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager _navManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IColorSchemeService _colorSchemeService { get; set; }
     }
 }
 #pragma warning restore 1591

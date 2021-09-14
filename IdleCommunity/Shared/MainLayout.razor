@@ -1,16 +1,19 @@
 ﻿@inherits LayoutComponentBase
 
+@inject IColorSchemeService _colorSchemeService
+@inject NavigationManager _navManager
+
 <MudThemeProvider/>
 <MudDialogProvider/>
 <MudSnackbarProvider/>
 
 
 <MudLayout>
-    <MudAppBar>
+    <MudAppBar Color="appMenuBarColor">
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())"/>
         <MudText Typo="Typo.h4">MainAppBar</MudText>
     </MudAppBar>
-    <MudDrawer @bind-Open="@_drawerOpen">
+    <MudDrawer @bind-Open="@_drawerOpen" Color="Color.Inherit">
         <MudDrawerHeader>
             <MudText Typo="Typo.h5" Class="mt-1">Places</MudText>
         </MudDrawerHeader>
@@ -22,11 +25,22 @@
 </MudLayout>
 
 @code {
+    
     bool _drawerOpen = true;
 
     void DrawerToggle()
     {
         _drawerOpen = !_drawerOpen;
     }
+}
+@code {
+    Color appMenuBarColor;
+    protected override Task OnInitializedAsync()
+    {
+        appMenuBarColor = _colorSchemeService.ColorScheme[_navManager.Uri.Replace(_navManager.BaseUri, "/")];
+        return base.OnInitializedAsync();
+    }
 
 }
+
+
