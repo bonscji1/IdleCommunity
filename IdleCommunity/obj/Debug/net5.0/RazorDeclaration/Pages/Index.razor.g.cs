@@ -98,7 +98,7 @@ using MudBlazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 13 "/mnt/LinuxSpace/Work/Projects/IdleCommunity/IdleCommunity/Pages/Index.razor"
+#line 16 "/mnt/LinuxSpace/Work/Projects/IdleCommunity/IdleCommunity/Pages/Index.razor"
  
     int _number = 0;
 

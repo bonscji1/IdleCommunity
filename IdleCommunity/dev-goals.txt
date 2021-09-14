@@ -1,0 +1,14 @@
+THIS IS A LIST OF GOALS FOR IDLE COMMUNITY
+-i basically needed 1 place to place my ideas in so i don't lose them and i grew tired of looking for that one particular paper i wrote something on so here we go.
+
+BASIC IDEA:
+    welcome page: maybe greet people and explain the basics, introduce myself, show important stuff, should be easy to skip by menu bar places
+    todo: later
+
+VISUAL SIDE:
+    Created how i want it to look visually, it is on the paper and its a drawing so shit i like it :D.
+    i can live with 1 paper, may ad as picture later. it is basically blazor with custom containers, i fully expect this to improve and change is i go on.
+
+
+CONTENT: this gonna be big so i need sections
+    todo:later

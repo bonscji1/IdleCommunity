@@ -8,11 +8,11 @@
 <MudLayout>
     <MudAppBar>
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())"/>
-        MainAppBar
+        <MudText Typo="Typo.h4">MainAppBar</MudText>
     </MudAppBar>
     <MudDrawer @bind-Open="@_drawerOpen">
         <MudDrawerHeader>
-            <MudText Typo="Typo.h5" Class="mt-1">Navigation</MudText>
+            <MudText Typo="Typo.h5" Class="mt-1">Places</MudText>
         </MudDrawerHeader>
         <NavMenu/>
     </MudDrawer>

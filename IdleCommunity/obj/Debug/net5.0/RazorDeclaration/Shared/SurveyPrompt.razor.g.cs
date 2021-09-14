@@ -97,7 +97,7 @@ using MudBlazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "/mnt/LinuxSpace/Work/Projects/IdleCommunity/IdleCommunity/Shared/SurveyPrompt.razor"
+#line 13 "/mnt/LinuxSpace/Work/Projects/IdleCommunity/IdleCommunity/Shared/SurveyPrompt.razor"
        
     // Demonstrates how a parent component can supply parameters
     [Parameter]
