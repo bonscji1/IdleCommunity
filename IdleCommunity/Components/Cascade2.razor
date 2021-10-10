@@ -1,0 +1,21 @@
+<div class="ml-5">
+<h3>Cascade2</h3>
+
+    <p>@testPar2</p>
+    
+    <button @onclick="increaseCounter">increaseCount</button>
+</div>
+@code {
+    [CascadingParameter(Name = "testingValue")]
+    public string testPar2 { get; set; }
+
+    [Parameter]
+    public EventCallback<int> setCurrentCount { get; set; }
+
+    private int count = 0;
+    public void increaseCounter()
+    {
+        count++;
+        setCurrentCount.InvokeAsync(count);
+    }
+}

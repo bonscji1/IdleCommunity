@@ -1,0 +1,27 @@
+@if (show)
+{
+    <div class="ml-5">
+
+        <h3>Cascade1</h3>
+        <p>Count: @currentCount</p>
+    
+        <Cascade2 setCurrentCount="setCurrentCount"></Cascade2>
+    </div> 
+}
+
+@code {
+    public bool show;
+
+    public void changeShow()
+    {
+        show = !show;
+        StateHasChanged();
+    }
+    
+    private int currentCount;
+
+    private void setCurrentCount(int value)
+    {
+        currentCount = value;
+    }
+}

@@ -1,0 +1,23 @@
+@page "/cascadeTest"
+<h3>CascadeTest</h3>
+<button  @onclick="(() => { 
+cas1.changeShow();
+})">Show Cascade</button>
+
+<CascadingValue Name="testingValue" Value="@testingValue">
+    <Cascade1 @ref="cas1"></Cascade1>
+</CascadingValue>
+<br/>
+<button  @onclick="changeText">Click me</button>
+@code {
+    private Cascade1 cas1;
+    
+    private string testingValue = "no clicks yet";
+    
+
+    private void changeText()
+    {
+        testingValue = "i got clicked";
+    }
+
+}
